@@ -1,0 +1,122 @@
+/* Reset CSS พื้นฐาน */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ตั้งค่าพื้นหลังของ Body */
+body {
+  font-family: 'Prompt', sans-serif; /* หรือฟอนต์อื่นที่คุณใช้ใน Figma */
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ให้เต็มหน้าจอแนวตั้ง */
+}
+
+/* กล่องล็อกอินหลัก */
+.login-container {
+  width: 320px; /* ความกว้างตามดีไซน์ (ปรับได้) */
+  background-color: #fff;
+  border: 2px solid #ff6b6b; /* สีแดงตามดีไซน์ */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* กลุ่ม Input (ไอคอน + ช่องกรอก) */
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+}
+.icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+.input-group input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+/* ตัวเลือก บันทึก / ลืมรหัสผ่าน */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.options .forgot-link {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.options .forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* ปุ่มต่าง ๆ */
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* ปุ่ม "เข้าสู่ระบบ" */
+.login-btn {
+  background-color: #ff6b6b;
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+.login-btn:hover {
+  background-color: #ff3b3b;
+}
+
+/* ปุ่ม "ลงทะเบียน" */
+.register-btn {
+  background-color: #fff;
+  color: #ff6b6b;
+  border: 2px solid #ff6b6b;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.register-btn:hover {
+  background-color: #ffe6e6;
+}
+
+/* ปุ่ม "เข้าสู่ระบบผ่าน Google" */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #ddd;
+  transition: background-color 0.3s;
+}
+.google-btn:hover {
+  background-color: #f9f9f9;
+}
+.google-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}

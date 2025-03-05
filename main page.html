@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOCPU - จัดสเปคคอม</title>
+  <link rel="stylesheet" href="SUP main.css">
+</head>
+<body>
+
+  <!-- ส่วน Header -->
+  <header class="site-header">
+    <div class="logo">NOCPU</div>
+    <nav class="nav-links">
+      <a href="#">จัดสเปค</a>
+      <a href="#">ข่าวใหม่</a>
+      <a href="#">ติดต่อเรา</a>
+    </nav>
+    <div class="right-section">
+      <!-- ไอคอนตะกร้า (อาจใช้รูป หรืออีโมจิ) -->
+      <div class="cart-icon">🛒</div>
+      <button class="login-btn">login</button>
+    </div>
+  </header>
+
+  <!-- ส่วนหลัก (Sidebar + Content) -->
+  <main class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul class="part-list">
+        <li>cpu <button>+ ADD</button></li>
+        <li>mainboard <button>+ ADD</button></li>
+        <li>graphic card <button>+ ADD</button></li>
+        <li>memory <button>+ ADD</button></li>
+        <li>solid state drive <button>+ ADD</button></li>
+        <li>hard disk drive <button>+ ADD</button></li>
+      </ul>
+      <div class="reset-section">
+        <button class="reset-btn">RESET</button>
+        <span class="price-total">0 B</span>
+      </div>
+      <button class="build-btn">จัดสเปค</button>
+    </aside>
+
+    <!-- Content -->
+    <section class="content">
+      <div class="content-header">
+        <h2>เลือก VGA</h2>
+        <div class="filter-section">
+          <label for="brand">Brand</label>
+          <select id="brand" class="filter-select">
+            <option>ทุกแบรนด์</option>
+            <option>Brand A</option>
+            <option>Brand B</option>
+          </select>
+
+          <label for="series">Series</label>
+          <select id="series" class="filter-select">
+            <option>ทั้งหมด</option>
+            <option>Series 1</option>
+            <option>Series 2</option>
+          </select>
+
+          <label for="chipset">Chipset</label>
+          <select id="chipset" class="filter-select">
+            <option>ทั้งหมด</option>
+            <option>Chipset 1</option>
+            <option>Chipset 2</option>
+          </select>
+
+          <input type="text" placeholder="ค้นหา..." class="search-box">
+          <select class="filter-select">
+            <option>รุ่นล่าสุด</option>
+            <option>ราคาต่ำ-สูง</option>
+            <option>ราคาสูง-ต่ำ</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Grid แสดงสินค้า -->
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">ภาพสินค้า</div>
+          <div class="product-info">
+            <h3 class="product-name">VGA Model 1</h3>
+            <p class="product-detail">รายละเอียดสั้น ๆ ของสินค้า</p>
+            <span class="product-price">฿4,500</span>
+            <button class="add-cart-btn">หยิบใส่ตะกร้า</button>
+          </div>
+        </div>
+        <!-- คัดลอก product-card เพิ่มได้ตามจำนวนสินค้า -->
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
+

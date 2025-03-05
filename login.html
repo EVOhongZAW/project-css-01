@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เข้าสู่ระบบ</title>
+  <link rel="stylesheet" href="SUP login.css">
+</head>
+<body>
+
+  <!-- กล่องสำหรับล็อกอิน -->
+  <div class="login-container">
+    <!-- ไอคอน + ชื่อผู้ใช้ -->
+    <div class="input-group">
+      <!-- ถ้าต้องการใช้ Font Awesome ไอคอนผู้ใช้:
+           <i class="fa fa-user"></i> 
+           หรือแทนด้วย <img src="user-icon.png" alt="user icon"> -->
+      <span class="icon">👤</span> 
+      <input type="text" placeholder="ชื่อผู้ใช้">
+    </div>
+
+    <!-- ไอคอน + รหัสผ่าน -->
+    <div class="input-group">
+      <!-- ไอคอนล็อค หรือใช้ Font Awesome:
+           <i class="fa fa-lock"></i> -->
+      <span class="icon">🔒</span>
+      <input type="password" placeholder="รหัสผ่าน">
+    </div>
+
+    <!-- ตัวเลือก: บันทึก / ลืมรหัสผ่าน -->
+    <div class="options">
+      <label>
+        <input type="checkbox">
+        บันทึก
+      </label>
+      <a href="#" class="forgot-link">ลืมรหัสผ่าน?</a>
+    </div>
+
+    <!-- ปุ่มต่าง ๆ -->
+    <button class="btn login-btn">เข้าสู่ระบบ</button>
+    <button class="btn register-btn">ลงทะเบียน</button>
+    <button class="btn google-btn">
+      <!-- ถ้าต้องการใส่โลโก้ Google:
+           <img src="google-logo.png" alt="Google Logo" class="google-logo"> -->
+      เข้าสู่ระบบผ่าน Google
+    </button>
+  </div>
+
+</body>
+</html>
