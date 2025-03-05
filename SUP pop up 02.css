@@ -1,0 +1,151 @@
+/* รีเซ็ตค่า CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Prompt', sans-serif; /* หรือฟอนต์อื่นที่ต้องการ */
+  background-color: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ปุ่มทดสอบแสดง Pop-up */
+.show-popup-btn {
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* พื้นหลังมืด (Overlay) */
+.overlay {
+  display: none; /* ซ่อนก่อน */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 10; /* อยู่เหนือเนื้อหาอื่น */
+}
+
+/* กล่อง Pop-up */
+.popup {
+  display: none; /* ซ่อนก่อน */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; /* ปรับตามต้องการ */
+  background-color: #fff;
+  border: 4px solid #ff6b6b; /* ขอบสีแดง */
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 11; /* อยู่เหนือ overlay */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* ปุ่ม X (ปิด Pop-up) */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+}
+
+/* ส่วนหัวข้อของ Pop-up */
+.popup-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* ส่วนแสดงอุปกรณ์ไม่เข้ากัน (CPU vs Mainboard) */
+.incompatible-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.item {
+  text-align: center;
+  margin: 0 10px;
+}
+.item-image {
+  width: 100px; /* ปรับตามต้องการ */
+  height: auto;
+  margin-bottom: 8px;
+}
+.item-label {
+  font-weight: 500;
+}
+.cross-icon {
+  font-size: 2rem;
+  color: red;
+  margin: 0 10px;
+}
+
+/* ข้อความอธิบาย */
+.description {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ส่วนแนะนำสินค้า */
+.recommend-title {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.recommend-description {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.recommended-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* ถ้าจอเล็กจะขึ้นบรรทัดใหม่ */
+}
+.recommended-item {
+  text-align: center;
+  width: 120px; /* ปรับตามต้องการ */
+}
+.rec-image {
+  width: 100px; /* ปรับตามต้องการ */
+  height: auto;
+  margin-bottom: 5px;
+}
+
+/* Responsive (มือถือ/จอเล็ก) */
+@media (max-width: 768px) {
+  .popup {
+    width: 90%;
+    max-width: 400px;
+  }
+  .incompatible-section {
+    flex-direction: column;
+  }
+  .cross-icon {
+    margin: 10px 0;
+  }
+  .recommended-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

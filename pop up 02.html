@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pop-up อุปกรณ์ไม่เข้ากัน</title>
+  <link rel="stylesheet" href="SUP pop up 02.css">
+</head>
+<body>
+
+  <!-- ตัวอย่างปุ่มเพื่อแสดง Pop-up (สำหรับทดสอบ) -->
+  <button id="showPopupBtn" class="show-popup-btn">ทดสอบแสดง Pop-up</button>
+
+  <!-- พื้นหลังมืด (Overlay) -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- กล่อง Pop-up -->
+  <div id="popup" class="popup">
+    <!-- ปุ่มปิด (X) -->
+    <button id="closeBtn" class="close-btn">X</button>
+    
+    <h2 class="popup-title">อุปกรณ์ไม่เข้ากัน</h2>
+    
+    <div class="incompatible-section">
+      <!-- รูป CPU -->
+      <div class="item">
+        <img src="cpu.png" alt="CPU" class="item-image">
+        <p class="item-label">Intel Core i5-10400</p>
+      </div>
+      <!-- เครื่องหมาย X ตรงกลาง -->
+      <div class="cross-icon">✕</div>
+      <!-- รูป Mainboard (ที่ไม่รองรับ) -->
+      <div class="item">
+        <img src="mobo-incompatible.png" alt="Mainboard" class="item-image">
+        <p class="item-label">Mainboard LGA 1151</p>
+      </div>
+    </div>
+
+    <p class="description">
+      Intel Core i5-10400 ใช้ Socket LGA 1200 แต่เมนบอร์ดที่คุณเลือกเป็น Socket LGA 1151 ซึ่งไม่สามารถใช้งานร่วมกันได้
+    </p>
+
+    <h3 class="recommend-title">แนะนำ</h3>
+    <p class="recommend-description">
+      เมนบอร์ดต่อไปนี้รองรับ Socket LGA 1200
+    </p>
+
+    <!-- รายการสินค้าแนะนำ -->
+    <div class="recommended-list">
+      <div class="recommended-item">
+        <img src="mobo1.png" alt="ASUS PRIME H510M" class="rec-image">
+        <p>ASUS PRIME H510M-K R2.0</p>
+      </div>
+      <div class="recommended-item">
+        <img src="mobo2.png" alt="ASRock H510M" class="rec-image">
+        <p>ASRock H510M-HDV/M.2</p>
+      </div>
+      <div class="recommended-item">
+        <img src="mobo3.png" alt="Gigabyte H510M" class="rec-image">
+        <p>Gigabyte H510M S2</p>
+      </div>
+      <!-- สามารถเพิ่ม/ลดสินค้าได้ตามต้องการ -->
+    </div>
+  </div>
+
+  <!-- ใส่ JavaScript ไว้ท้าย body -->
+  <script>
+    // เลือกองค์ประกอบจาก HTML
+    const showPopupBtn = document.getElementById('showPopupBtn');
+    const overlay = document.getElementById('overlay');
+    const popup = document.getElementById('popup');
+    const closeBtn = document.getElementById('closeBtn');
+
+    // ฟังก์ชันเปิด Pop-up
+    function openPopup() {
+      overlay.style.display = 'block';
+      popup.style.display = 'block';
+    }
+
+    // ฟังก์ชันปิด Pop-up
+    function closePopup() {
+      overlay.style.display = 'none';
+      popup.style.display = 'none';
+    }
+
+    // กดปุ่ม "ทดสอบแสดง Pop-up"
+    showPopupBtn.addEventListener('click', openPopup);
+
+    // กดปุ่ม X
+    closeBtn.addEventListener('click', closePopup);
+
+    // กดตรง Overlay (พื้นหลังมืด) ก็ปิดได้
+    overlay.addEventListener('click', closePopup);
+  </script>
+
+</body>
+</html>
