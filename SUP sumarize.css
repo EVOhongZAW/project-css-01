@@ -1,0 +1,202 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Prompt', sans-serif; /* หรือฟอนต์อื่นที่คุณใช้ */
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Header */
+.site-header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-links a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.login-btn {
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.login-btn:hover {
+  background-color: #ff3b3b;
+}
+
+/* หน้า Cart (ตะกร้าสินค้า) */
+.cart-page {
+  background-color: #fff;
+  border: 4px solid #ff6b6b; /* กรอบสีแดง */
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.page-title {
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Container หลัก (รายการสินค้า + สรุป) */
+.cart-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* รายการสินค้า (ส่วนซ้าย) */
+.cart-items {
+  flex: 2; /* พื้นที่ 2 ส่วน */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cart-item {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 50px; 
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+.cart-header {
+  background-color: #ff6b6b;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+}
+.cart-header > div {
+  text-align: center;
+}
+.cart-col-product {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-image {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  /* ถ้าใช้ <img> จริง ก็เอา bg ออก แล้วใช้ <img> แทน */
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+.product-name {
+  font-size: 1rem;
+}
+.cart-col-price, .cart-col-total, .cart-col-remove {
+  text-align: center;
+}
+.cart-col-qty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.qty-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.qty-btn:hover {
+  background-color: #ff3b3b;
+}
+.qty-value {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+.remove-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* สรุปการสั่งซื้อ (ส่วนขวา) */
+.cart-summary {
+  flex: 1; /* พื้นที่ 1 ส่วน */
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.cart-summary h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+.summary-item, .summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+.summary-total {
+  font-weight: bold;
+  border-top: 2px solid #ff6b6b;
+  padding-top: 10px;
+}
+.checkout-btn, .continue-btn {
+  width: 100%;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+.checkout-btn:hover, .continue-btn:hover {
+  background-color: #ff3b3b;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .cart-container {
+    flex-direction: column;
+  }
+  .cart-item {
+    grid-template-columns: 2fr 1fr 1fr 1fr 40px;
+  }
+}

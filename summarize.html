@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - NOCPU</title>
+  <link rel="stylesheet" href="SUP sumarize.css">
+</head>
+<body>
+
+  <!-- ส่วน Header -->
+  <header class="site-header">
+    <div class="logo">NOCPU</div>
+    <nav class="nav-links">
+      <a href="#">จัดสเปค</a>
+      <a href="#">ข่าวใหม่</a>
+      <a href="#">ติดต่อเรา</a>
+    </nav>
+    <div class="right-section">
+      <div class="cart-icon">🛒</div>
+      <button class="login-btn">login</button>
+    </div>
+  </header>
+
+  <!-- ส่วนเนื้อหาหลัก (ตะกร้าสินค้า) -->
+  <main class="cart-page">
+    <h2 class="page-title">ตะกร้าสินค้า</h2>
+
+    <!-- กล่องหลัก: รายการสินค้า + สรุปการสั่งซื้อ -->
+    <div class="cart-container">
+      <!-- ส่วนซ้าย: รายการสินค้า -->
+      <section class="cart-items">
+        <!-- หัวตาราง หรือหัวคอลัมน์ -->
+        <div class="cart-item cart-header">
+          <div class="cart-col-product">สินค้า</div>
+          <div class="cart-col-price">ราคา/ชิ้น</div>
+          <div class="cart-col-qty">จำนวน</div>
+          <div class="cart-col-total">ราคารวม</div>
+          <div class="cart-col-remove">ลบ</div>
+        </div>
+
+        <!-- ตัวอย่างสินค้า 1 ชิ้น -->
+        <div class="cart-item">
+          <div class="cart-col-product">
+            <!-- รูปสินค้า -->
+            <div class="product-image">
+              <!-- <img src="images/product.jpg" alt="สินค้า" /> -->
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">CPU Ryzen 5 3600</h3>
+            </div>
+          </div>
+          <div class="cart-col-price">฿875.50</div>
+          <div class="cart-col-qty">
+            <button class="qty-btn">-</button>
+            <span class="qty-value">1</span>
+            <button class="qty-btn">+</button>
+          </div>
+          <div class="cart-col-total">฿875.50</div>
+          <div class="cart-col-remove">
+            <button class="remove-btn">🗑</button>
+          </div>
+        </div>
+
+        <!-- สามารถคัดลอก .cart-item เพิ่มได้ตามจำนวนสินค้า -->
+      </section>
+
+      <!-- ส่วนขวา: สรุปการสั่งซื้อ -->
+      <aside class="cart-summary">
+        <h3>สรุปค่าสั่งซื้อ</h3>
+        <div class="summary-item">
+          <span>ค่าสินค้า</span>
+          <span>฿875.50</span>
+        </div>
+        <div class="summary-item">
+          <span>ค่าจัดส่ง</span>
+          <span>฿50.00</span>
+        </div>
+        <div class="summary-total">
+          <span>ราคารวม</span>
+          <span>฿925.50</span>
+        </div>
+
+        <!-- ปุ่มดำเนินการ -->
+        <button class="checkout-btn">สั่งซื้อสินค้า</button>
+        <button class="continue-btn">เลือกดูสินค้า</button>
+      </aside>
+    </div>
+  </main>
+
+</body>
+</html>
