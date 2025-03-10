@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ชำระเงิน</title>
+  <link rel="stylesheet" href="SUP pay.css">
+</head>
+<body>
+
+  <!-- ส่วน Header (เหมือนตัวอย่างก่อน) -->
+  <header class="site-header">
+    <div class="logo">NOCPU</div>
+    <nav class="nav-links">
+      <a href="#">จัดสเปค</a>
+      <a href="#">ข่าวใหม่</a>
+      <a href="#">ติดต่อเรา</a>
+    </nav>
+    <div class="right-section">
+      <div class="cart-icon">🛒</div>
+      <button class="login-btn">login</button>
+    </div>
+  </header>
+
+  <!-- ส่วนเนื้อหาหลัก (ชำระเงิน) -->
+  <main class="payment-container">
+    <h2 class="payment-title">ชำระเงิน</h2>
+
+    <!-- ใช้ Grid แบ่ง 2 คอลัมน์ (ซ้าย/ขวา) 2 แถว -->
+    <div class="payment-grid">
+      
+      <!-- ที่อยู่การจัดส่ง (ซ้ายบน) -->
+      <div class="address-box">
+        <label for="shipping-address" class="address-label">ที่อยู่</label>
+        <textarea id="shipping-address" class="address-textarea" rows="4" placeholder="ที่อยู่ในการจัดส่ง..."></textarea>
+        <div class="add-address">+ เพิ่มที่อยู่การจัดส่ง</div>
+      </div>
+
+      <!-- รูปแบบการจัดส่ง (ขวาบน) -->
+      <div class="shipping-box">
+        <h3>รูปแบบการจัดส่ง</h3>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="shipping" checked>
+              ลงทะเบียน 5-7 วันทำการ <span class="price">xx บาท</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="shipping">
+              EMS 1-3 วันทำการ <span class="price">xx บาท</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ช่องทางการชำระเงิน (ซ้ายล่าง) -->
+      <div class="payment-channel">
+        <h3>ช่องทางการชำระเงิน</h3>
+        <!-- ตัวอย่าง QR Code -->
+        <div class="qrcode-box">
+          <img src="images/qrcode.png" alt="QR Code" class="qrcode-image">
+        </div>
+        <!-- หรือจะใส่เลขบัญชี / ชื่อบัญชี เพิ่มเติมก็ได้ -->
+      </div>
+
+      <!-- สรุปยอด + ปุ่มยืนยัน (ขวาล่าง) -->
+      <div class="payment-summary">
+        <div class="summary-row">
+          <span>ยอดชำระทั้งหมด</span>
+          <span class="total-amount">xxx บาท</span>
+        </div>
+        <button class="confirm-btn">ยืนยันการชำระ</button>
+      </div>
+
+    </div> <!-- /payment-grid -->
+
+  </main>
+
+</body>
+</html>
