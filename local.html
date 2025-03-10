@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ที่อยู่การจัดส่ง</title>
+  <link rel="stylesheet" href="SUP local.css">
+</head>
+<body>
+
+  <!-- ส่วน Header (ยกตัวอย่างเหมือนหน้าอื่น ๆ) -->
+  <header class="site-header">
+    <div class="logo">NOCPU</div>
+    <nav class="nav-links">
+      <a href="#">จัดสเปค</a>
+      <a href="#">ข่าวใหม่</a>
+      <a href="#">ติดต่อเรา</a>
+    </nav>
+    <div class="right-section">
+      <div class="cart-icon">🛒</div>
+      <button class="login-btn">login</button>
+    </div>
+  </header>
+
+  <!-- ส่วนเนื้อหาหลัก: ฟอร์มที่อยู่การจัดส่ง -->
+  <main class="address-container">
+    <h2 class="address-title">ที่อยู่การจัดส่ง</h2>
+
+    <form class="address-form">
+      <!-- คอลัมน์ซ้าย -->
+      <div class="form-group">
+        <label for="fullname">ชื่อ - นามสกุล</label>
+        <input type="text" id="fullname" placeholder="ชื่อ - นามสกุล">
+      </div>
+
+      <div class="form-group">
+        <label for="email">อีเมล</label>
+        <input type="email" id="email" placeholder="อีเมล">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">เบอร์โทร</label>
+        <input type="tel" id="phone" placeholder="เบอร์โทร">
+      </div>
+
+      <div class="form-group">
+        <label for="phone2">เบอร์โทร (สำรอง)</label>
+        <input type="tel" id="phone2" placeholder="เบอร์โทร (สำรอง)">
+      </div>
+
+      <div class="form-group">
+        <label for="zipcode">รหัสไปรษณีย์</label>
+        <input type="text" id="zipcode" placeholder="รหัสไปรษณีย์">
+      </div>
+
+      <div class="form-group">
+        <label for="province">จังหวัด</label>
+        <input type="text" id="province" placeholder="จังหวัด">
+      </div>
+
+      <div class="form-group">
+        <label for="address1">ที่อยู่ 1</label>
+        <input type="text" id="address1" placeholder="ที่อยู่ 1">
+      </div>
+
+      <div class="form-group">
+        <label for="address2">ที่อยู่ 2</label>
+        <input type="text" id="address2" placeholder="ที่อยู่ 2">
+      </div>
+
+      <!-- ปุ่ม บันทึก -->
+      <button type="submit" class="save-btn">บันทึก</button>
+    </form>
+  </main>
+
+</body>
+</html>
