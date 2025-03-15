@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Cart - NOCPU</title>
+  <title>ตะกร้าสินค้า - NOCPU</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="SUP sumarize.css">
+  <style>
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,75 +25,146 @@
     </nav>
     <div class="right-section">
       <div class="cart-icon">🛒</div>
-      <button class="login-btn">login</button>
+      <button class="login-btn">เข้าสู่ระบบ</button>
     </div>
   </header>
 
-  <!-- ส่วนเนื้อหาหลัก (ตะกร้าสินค้า) -->
-  <main class="cart-page">
-    <h2 class="page-title">ตะกร้าสินค้า</h2>
+  <!-- หน้า Cart (ตะกร้าสินค้า) -->
+  <div class="cart-page">
+    <h2 class="page-title">🛍️ ตะกร้าสินค้าของคุณ</h2>
 
-    <!-- กล่องหลัก: รายการสินค้า + สรุปการสั่งซื้อ -->
     <div class="cart-container">
-      <!-- ส่วนซ้าย: รายการสินค้า -->
-      <section class="cart-items">
-        <!-- หัวตาราง หรือหัวคอลัมน์ -->
+      <!-- รายการสินค้า -->
+      <div class="cart-items">
         <div class="cart-item cart-header">
           <div class="cart-col-product">สินค้า</div>
-          <div class="cart-col-price">ราคา/ชิ้น</div>
+          <div class="cart-col-price">ราคา</div>
           <div class="cart-col-qty">จำนวน</div>
           <div class="cart-col-total">ราคารวม</div>
           <div class="cart-col-remove">ลบ</div>
         </div>
 
-        <!-- ตัวอย่างสินค้า 1 ชิ้น -->
         <div class="cart-item">
           <div class="cart-col-product">
-            <!-- รูปสินค้า -->
             <div class="product-image">
-              <!-- <img src="images/product.jpg" alt="สินค้า" /> -->
+              <img src="cpu-5600x.jpg" alt="CPU AMD Ryzen 5 5600X">
             </div>
             <div class="product-info">
-              <h3 class="product-name">CPU Ryzen 5 3600</h3>
+              <div class="product-name">CPU AMD Ryzen 5 5600X</div>
             </div>
           </div>
-          <div class="cart-col-price">฿875.50</div>
+          <div class="cart-col-price">฿7,500</div>
           <div class="cart-col-qty">
-            <button class="qty-btn">-</button>
+            <button class="qty-btn decrease">-</button>
             <span class="qty-value">1</span>
-            <button class="qty-btn">+</button>
+            <button class="qty-btn increase">+</button>
           </div>
-          <div class="cart-col-total">฿875.50</div>
-          <div class="cart-col-remove">
-            <button class="remove-btn">🗑</button>
-          </div>
+          <div class="cart-col-total">฿7,500</div>
+          <button class="remove-btn">❌</button>
         </div>
 
-        <!-- สามารถคัดลอก .cart-item เพิ่มได้ตามจำนวนสินค้า -->
-      </section>
+        <div class="cart-item">
+          <div class="cart-col-product">
+            <div class="product-image">
+              <img src="psu-650w.jpg" alt="Power Supply 650W">
+            </div>
+            <div class="product-info">
+              <div class="product-name">Power Supply 650W</div>
+            </div>
+          </div>
+          <div class="cart-col-price">฿2,500</div>
+          <div class="cart-col-qty">
+            <button class="qty-btn decrease">-</button>
+            <span class="qty-value">1</span>
+            <button class="qty-btn increase">+</button>
+          </div>
+          <div class="cart-col-total">฿2,500</div>
+          <button class="remove-btn">❌</button>
+        </div>
+      </div>
 
-      <!-- ส่วนขวา: สรุปการสั่งซื้อ -->
-      <aside class="cart-summary">
-        <h3>สรุปค่าสั่งซื้อ</h3>
+      <!-- สรุปคำสั่งซื้อ -->
+      <div class="cart-summary">
+        <h3>🛒 สรุปคำสั่งซื้อ</h3>
         <div class="summary-item">
-          <span>ค่าสินค้า</span>
-          <span>฿875.50</span>
+          <span>ยอดรวมสินค้า</span>
+          <span id="subtotal">฿10,000</span>
         </div>
         <div class="summary-item">
           <span>ค่าจัดส่ง</span>
-          <span>฿50.00</span>
+          <span>฿100</span>
         </div>
         <div class="summary-total">
-          <span>ราคารวม</span>
-          <span>฿925.50</span>
+          <span>ยอดรวมทั้งหมด</span>
+          <span id="total">฿10,100</span>
         </div>
-
-        <!-- ปุ่มดำเนินการ -->
-        <button class="checkout-btn">สั่งซื้อสินค้า</button>
-        <button class="continue-btn">เลือกดูสินค้า</button>
-      </aside>
+        <button class="checkout-btn">🛍️ ดำเนินการชำระเงิน</button>
+        <button class="continue-btn">🛒 เลือกซื้อสินค้าต่อ</button>
+      </div>
     </div>
-  </main>
+  </div>
 
+  <!-- เพิ่ม JavaScript -->
+  <script>
+    // ฟังก์ชันสำหรับอัปเดตจำนวนสินค้า
+    function updateQuantity(button, delta) {
+      const qtyElement = button.parentElement.querySelector('.qty-value');
+      let qty = parseInt(qtyElement.textContent);
+      qty += delta;
+      if (qty < 1) qty = 1; // จำนวนไม่ต่ำกว่า 1
+      qtyElement.textContent = qty;
+
+      // อัปเดตราคารวม
+      updateTotalPrice(button);
+    }
+
+    // ฟังก์ชันสำหรับอัปเดตราคารวม
+    function updateTotalPrice(button) {
+      const cartItem = button.closest('.cart-item');
+      const price = parseInt(cartItem.querySelector('.cart-col-price').textContent.replace('฿', ''));
+      const qty = parseInt(cartItem.querySelector('.qty-value').textContent);
+      const total = price * qty;
+      cartItem.querySelector('.cart-col-total').textContent = `฿${total}`;
+
+      // อัปเดตยอดรวมทั้งหมด
+      updateCartTotal();
+    }
+
+    // ฟังก์ชันสำหรับอัปเดตยอดรวมทั้งหมด
+    function updateCartTotal() {
+      const cartItems = document.querySelectorAll('.cart-item:not(.cart-header)');
+      let subtotal = 0;
+      cartItems.forEach(item => {
+        const total = parseInt(item.querySelector('.cart-col-total').textContent.replace('฿', ''));
+        subtotal += total;
+      });
+
+      const shipping = 100; // ค่าจัดส่ง
+      const total = subtotal + shipping;
+
+      document.getElementById('subtotal').textContent = `฿${subtotal}`;
+      document.getElementById('total').textContent = `฿${total}`;
+    }
+
+    // เพิ่ม Event Listener ให้กับปุ่มเพิ่ม/ลดจำนวน
+    document.querySelectorAll('.qty-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const delta = button.classList.contains('increase') ? 1 : -1;
+        updateQuantity(button, delta);
+      });
+    });
+
+    // เพิ่ม Event Listener ให้กับปุ่มลบสินค้า
+    document.querySelectorAll('.remove-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const cartItem = button.closest('.cart-item');
+        cartItem.remove();
+        updateCartTotal();
+      });
+    });
+
+    // อัปเดตยอดรวมทั้งหมดเมื่อโหลดหน้าเว็บ
+    window.onload = () => updateCartTotal();
+  </script>
 </body>
 </html>
