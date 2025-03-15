@@ -6,12 +6,17 @@
 }
 
 body {
-  font-family: 'Prompt', sans-serif; /* หรือฟอนต์อื่นที่ต้องการ */
+  font-family: 'Roboto', sans-serif; /* ใช้ Roboto สำหรับเนื้อหา */
   background-color: #f0f0f0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* ใช้ Poppins สำหรับหัวข้อ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* ปุ่มทดสอบแสดง Pop-up */
@@ -22,6 +27,11 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-family: 'Roboto', sans-serif; /* ใช้ Roboto สำหรับปุ่ม */
+}
+
+.show-popup-btn:hover {
+  background-color: #ff3b3b;
 }
 
 /* พื้นหลังมืด (Overlay) */
@@ -63,6 +73,11 @@ body {
   cursor: pointer;
   color: #333;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif; /* ใช้ Roboto สำหรับปุ่มปิด */
+}
+
+.close-btn:hover {
+  color: #ff6b6b;
 }
 
 /* ส่วนหัวข้อของ Pop-up */
@@ -71,6 +86,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: #333;
+  font-family: 'Poppins', sans-serif; /* ใช้ Poppins สำหรับหัวข้อ */
 }
 
 /* ส่วนแสดงอุปกรณ์ไม่เข้ากัน (CPU vs Mainboard) */
@@ -80,18 +96,23 @@ body {
   justify-content: center;
   margin-bottom: 15px;
 }
+
 .item {
   text-align: center;
   margin: 0 10px;
 }
+
 .item-image {
   width: 100px; /* ปรับตามต้องการ */
   height: auto;
   margin-bottom: 8px;
 }
+
 .item-label {
   font-weight: 500;
+  font-family: 'Roboto', sans-serif; /* ใช้ Roboto สำหรับเนื้อหา */
 }
+
 .cross-icon {
   font-size: 2rem;
   color: red;
@@ -102,6 +123,7 @@ body {
 .description {
   text-align: center;
   margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif; /* ใช้ Roboto สำหรับเนื้อหา */
 }
 
 /* ส่วนแนะนำสินค้า */
@@ -110,21 +132,27 @@ body {
   font-size: 1.2rem;
   color: #333;
   margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif; /* ใช้ Poppins สำหรับหัวข้อ */
 }
+
 .recommend-description {
   text-align: center;
   margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif; /* ใช้ Roboto สำหรับเนื้อหา */
 }
+
 .recommended-list {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap; /* ถ้าจอเล็กจะขึ้นบรรทัดใหม่ */
 }
+
 .recommended-item {
   text-align: center;
   width: 120px; /* ปรับตามต้องการ */
 }
+
 .rec-image {
   width: 100px; /* ปรับตามต้องการ */
   height: auto;
@@ -137,15 +165,17 @@ body {
     width: 90%;
     max-width: 400px;
   }
+
   .incompatible-section {
     flex-direction: column;
   }
+
   .cross-icon {
     margin: 10px 0;
   }
+
   .recommended-list {
     flex-direction: column;
     align-items: center;
   }
 }
-
