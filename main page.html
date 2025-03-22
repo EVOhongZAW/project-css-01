@@ -23,208 +23,128 @@
     </div>
   </header>
 
-
   <main class="container">
-
+    <!-- Sidebar -->
     <aside class="sidebar">
+      <h2>เลือกสเปค</h2>
       <ul class="part-list">
         <li>
-          <span>เลือก CPU</span>
-          <span class="part-count"></span>
-          <button class="add-btn">Add</button>
+          <span>CPU</span>
+          <span class="part-count">0</span>
+          <button class="add-btn">ADD</button>
         </li>
         <li>
-          <span>เลือก Mainboard</span>
-          <span class="part-count"></span>
-          <button class="add-btn">Add</button>
+          <span>Mainboard</span>
+          <span class="part-count">0</span>
+          <button class="add-btn">ADD</button>
         </li>
         <li>
-          <span>เลือก GraphicCard</span>
-          <span class="part-count"></span>
-          <button class="add-btn">Add</button>
+          <span>GPU</span>
+          <span class="part-count">0</span>
+          <button class="add-btn">ADD</button>
         </li>
         <li>
-          <span>เลือก Memory</span>
-          <span class="part-count"></span>
-          <button class="add-btn">Add</button>
+          <span>RAM</span>
+          <span class="part-count">0</span>
+          <button class="add-btn">ADD</button>
         </li>
         <li>
-          <span>เลือก SolidStateDrive</span>
-          <span class="part-count"></span>
-          <button class="add-btn">Add</button>
+          <span>Storage</span>
+          <span class="part-count">0</span>
+          <button class="add-btn">ADD</button>
         </li>
         <li>
-          <span>เลือก HardDisk</span>
-          <span class="part-count"></span>
-          <button class="add-btn">Add</button>
+          <span>Power Supply</span>
+          <span class="part-count">0</span>
+          <button class="add-btn">ADD</button>
         </li>
         <li>
-          <span>เลือก PowerSupply</span>
-          <span class="part-count"></span>
-          <button class="add-btn">Add</button>
+          <span>Case</span>
+          <span class="part-count">0</span>
+          <button class="add-btn">ADD</button>
         </li>
         <li>
-          <span>เลือก Case</span>
-          <span class="part-count"></span>
-          <button class="add-btn">Add</button>
-        </li>
-        <li>
-          <span>เลือก CPUCooler</span>
-          <span class="part-count"></span>
-          <button class="add-btn">Add</button>
-        </li>
-        <li>
-          <span>เลือก Monitor</span>
-          <span class="part-count"></span>
-          <button class="add-btn">Add</button>
+          <span>Cooling</span>
+          <span class="part-count">0</span>
+          <button class="add-btn">ADD</button>
         </li>
       </ul>
       <div class="reset-section">
         <button type="button" class="reset-btn">RESET</button>
         <span class="price-total">0 B</span>
       </div>
-      <button type="button" class="build-btn">จัดสเปค</button>
     </aside>
 
-
+    <!-- ส่วน Content -->
     <section class="content">
-      <div class="content-header">
+      <div class="filter-section">
         <h2>เลือกอุปกรณ์</h2>
-        <div class="filter-section">
-          <div class="search-sort-section">
-            <input type="text" placeholder="ค้นหา..." class="search-box">
-            <select class="filter-select">
-              <option>รุ่นล่าสุด</option>
-              <option>ราคาต่ำ-สูง</option>
-              <option>ราคาสูง-ต่ำ</option>
-            </select>
-          </div>
+        <div class="filters">
+          <select class="filter-select">
+            <option>Brand</option>
+            <option>Intel</option>
+            <option>AMD</option>
+          </select>
+          <select class="filter-select">
+            <option>Series</option>
+            <option>Core i7</option>
+            <option>Ryzen 5</option>
+          </select>
+          <select class="filter-select">
+            <option>Chipset</option>
+            <option>Z690</option>
+            <option>B550</option>
+          </select>
+          <input type="text" placeholder="ค้นหา..." class="search-box">
+          <select class="sort-select">
+            <option>รุ่นล่าสุด</option>
+            <option>ราคาต่ำ-สูง</option>
+            <option>ราคาสูง-ต่ำ</option>
+          </select>
+          <button class="apply-filter-btn">Apply</button>
         </div>
       </div>
 
-      
+      <!-- ส่วนแสดงผลสินค้า -->
       <div class="product-grid">
-    
-        <div class="product-card" data-category="CPU">
-          <div class="product-image">ภาพสินค้า CPU</div>
+        <div class="product-card">
+          <div class="product-image">ภาพสินค้า</div>
           <div class="product-info">
             <h3 class="product-name">CPU Model 1</h3>
-            <p class="product-detail">รายละเอียดสั้น ๆ ของ CPU</p>
+            <p class="product-detail">รายละเอียดสั้น ๆ</p>
             <span class="product-price">฿4,500</span>
-            <button class="add-cart-btn" data-price="4500">หยิบใส่ตะกร้า</button>
+            <button class="add-cart-btn">หยิบใส่ตะกร้า</button>
           </div>
         </div>
-        <div class="product-card" data-category="CPU">
-          <div class="product-image">ภาพสินค้า CPU</div>
+        <div class="product-card">
+          <div class="product-image">ภาพสินค้า</div>
           <div class="product-info">
             <h3 class="product-name">CPU Model 2</h3>
-            <p class="product-detail">รายละเอียดสั้น ๆ ของ CPU</p>
+            <p class="product-detail">รายละเอียดสั้น ๆ</p>
             <span class="product-price">฿5,500</span>
-            <button class="add-cart-btn" data-price="5500">หยิบใส่ตะกร้า</button>
+            <button class="add-cart-btn">หยิบใส่ตะกร้า</button>
           </div>
         </div>
-
-        <div class="product-card" data-category="Mainboard">
-          <div class="product-image">ภาพสินค้า Mainboard</div>
+        <div class="product-card">
+          <div class="product-image">ภาพสินค้า</div>
           <div class="product-info">
             <h3 class="product-name">Mainboard Model 1</h3>
-            <p class="product-detail">รายละเอียดสั้น ๆ ของ Mainboard</p>
+            <p class="product-detail">รายละเอียดสั้น ๆ</p>
             <span class="product-price">฿3,500</span>
-            <button class="add-cart-btn" data-price="3500">หยิบใส่ตะกร้า</button>
+            <button class="add-cart-btn">หยิบใส่ตะกร้า</button>
           </div>
         </div>
-
-       
-        <div class="product-card" data-category="Monitor">
-          <div class="product-image">ภาพสินค้า Monitor</div>
+        <div class="product-card">
+          <div class="product-image">ภาพสินค้า</div>
           <div class="product-info">
-            <h3 class="product-name">Monitor Model 1</h3>
-            <p class="product-detail">รายละเอียดสั้น ๆ ของ Monitor</p>
-            <span class="product-price">฿7,500</span>
-            <button class="add-cart-btn" data-price="7500">หยิบใส่ตะกร้า</button>
-          </div>
-        </div>
-        <div class="product-card" data-category="Monitor">
-          <div class="product-image">ภาพสินค้า Monitor</div>
-          <div class="product-info">
-            <h3 class="product-name">Monitor Model 2</h3>
-            <p class="product-detail">รายละเอียดสั้น ๆ ของ Monitor</p>
-            <span class="product-price">฿8,500</span>
-            <button class="add-cart-btn" data-price="8500">หยิบใส่ตะกร้า</button>
-          </div>
-        </div>
-
-        <div class="product-card" data-category="Keyboard & Mouse">
-          <div class="product-image">ภาพสินค้า Keyboard & Mouse</div>
-          <div class="product-info">
-            <h3 class="product-name">Keyboard & Mouse Model 1</h3>
-            <p class="product-detail">รายละเอียดสั้น ๆ ของ Keyboard & Mouse</p>
-            <span class="product-price">฿1,500</span>
-            <button class="add-cart-btn" data-price="1500">หยิบใส่ตะกร้า</button>
-          </div>
-        </div>
-        <div class="product-card" data-category="Keyboard & Mouse">
-          <div class="product-image">ภาพสินค้า Keyboard & Mouse</div>
-          <div class="product-info">
-            <h3 class="product-name">Keyboard & Mouse Model 2</h3>
-            <p class="product-detail">รายละเอียดสั้น ๆ ของ Keyboard & Mouse</p>
-            <span class="product-price">฿2,000</span>
-            <button class="add-cart-btn" data-price="2000">หยิบใส่ตะกร้า</button>
+            <h3 class="product-name">GPU Model 1</h3>
+            <p class="product-detail">รายละเอียดสั้น ๆ</p>
+            <span class="product-price">฿25,000</span>
+            <button class="add-cart-btn">หยิบใส่ตะกร้า</button>
           </div>
         </div>
       </div>
     </section>
   </main>
-
- 
-  <script>
-
-function changeCategory(category) {
-
-  const productCards = document.querySelectorAll('.product-card');
-  productCards.forEach(card => card.style.display = 'none');
-
-  const selectedProducts = document.querySelectorAll(`.product-card[data-category="${category}"]`);
-  selectedProducts.forEach(product => product.style.display = 'block');
-}
-
-let totalPrice = 0;
-const priceTotalElement = document.querySelector('.price-total');
-
-function updateTotalPrice(price) {
-  totalPrice += price;
-  priceTotalElement.textContent = `${totalPrice} B`;
-}
-
-
-function resetTotalPrice() {
-  totalPrice = 0;
-  priceTotalElement.textContent = `${totalPrice} B`;
-}
-
-document.querySelectorAll('.add-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const category = button.parentElement.querySelector('span').textContent.replace('เลือก ', '');
-    changeCategory(category);
-  });
-});
-
-
-document.querySelectorAll('.add-cart-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const price = parseInt(button.getAttribute('data-price'));
-    updateTotalPrice(price);
-  });
-});
-
-
-document.querySelector('.reset-btn').addEventListener('click', () => {
-  resetTotalPrice();
-});
-
-
-window.onload = () => changeCategory('CPU');
-  </script>
 </body>
 </html>
-
