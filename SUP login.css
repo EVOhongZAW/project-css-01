@@ -1,122 +1,251 @@
-/* Reset CSS พื้นฐาน */
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
 }
 
-/* ตั้งค่าพื้นหลังของ Body */
-body {
-  font-family: 'Prompt', sans-serif; /* หรือฟอนต์อื่นที่คุณใช้ใน Figma */
-  background-color: #f0f0f0;
+/* ใช้ Poppins สำหรับหัวข้อ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Layout */
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* ให้เต็มหน้าจอแนวตั้ง */
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 20px;
 }
 
-/* กล่องล็อกอินหลัก */
-.login-container {
-  width: 320px; /* ความกว้างตามดีไซน์ (ปรับได้) */
+/* Sidebar */
+.sidebar {
   background-color: #fff;
-  border: 2px solid #ff6b6b; /* สีแดงตามดีไซน์ */
-  border-radius: 8px;
+  width: 250px;
   padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-height: 600px;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
 }
 
-/* กลุ่ม Input (ไอคอน + ช่องกรอก) */
-.input-group {
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 25px;
+.sidebar h2 {
+  font-size: 20px;
   margin-bottom: 15px;
-  padding: 5px 10px;
-}
-.icon {
-  margin-right: 10px;
-  font-size: 1.2rem;
-}
-.input-group input {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  padding: 5px;
+  color: #333;
 }
 
-/* ตัวเลือก บันทึก / ลืมรหัสผ่าน */
-.options {
+.part-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.part-list li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
-}
-.options label {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.options .forgot-link {
-  color: #ff6b6b;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-.options .forgot-link:hover {
-  text-decoration: underline;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
 }
 
-/* ปุ่มต่าง ๆ */
-.btn {
-  width: 100%;
-  border: none;
-  border-radius: 25px;
-  padding: 10px;
-  font-size: 1rem;
-  margin-bottom: 10px;
-  cursor: pointer;
+.part-list li:last-child {
+  border-bottom: none;
 }
 
-/* ปุ่ม "เข้าสู่ระบบ" */
-.login-btn {
+.part-list li span {
+  flex: 1;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.part-count {
+  font-size: 14px;
+  color: #666;
+  margin-right: 10px;
+}
+
+.add-btn, .reset-btn, .apply-filter-btn, .add-cart-btn, .login-btn {
   background-color: #ff6b6b;
-  color: #fff;
-  font-weight: 500;
-  transition: background-color 0.3s;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
-.login-btn:hover {
+
+.add-btn:hover, .reset-btn:hover, .apply-filter-btn:hover, .add-cart-btn:hover, .login-btn:hover {
   background-color: #ff3b3b;
 }
 
-/* ปุ่ม "ลงทะเบียน" */
-.register-btn {
-  background-color: #fff;
-  color: #ff6b6b;
-  border: 2px solid #ff6b6b;
-  font-weight: 500;
-  transition: all 0.3s;
-}
-.register-btn:hover {
-  background-color: #ffe6e6;
+.reset-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
 }
 
-/* ปุ่ม "เข้าสู่ระบบผ่าน Google" */
-.google-btn {
+.price-total {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-select, .sort-select, .search-box {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.search-sort-apply {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; 
+}
+
+.search-box {
+  width: 150px; 
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  height: 150px;
+  background-color: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-  color: #333;
-  border: 2px solid #ddd;
-  transition: background-color 0.3s;
+  font-size: 18px;
+  color: #666;
 }
-.google-btn:hover {
-  background-color: #f9f9f9;
+
+.product-info {
+  padding: 15px;
 }
-.google-logo {
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
+
+.product-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product-detail {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff6b6b;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    max-height: none;
+    position: static;
+  }
+  .nav-links, .right-section {
+    display: none;
+  }
+  .logo {
+    font-size: 20px;
+  }
 }
