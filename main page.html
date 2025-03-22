@@ -30,42 +30,42 @@
       <ul class="part-list">
         <li>
           <span>CPU</span>
-          <span class="part-count">0</span>
+          <span class="part-count"></span>
           <button class="add-btn">ADD</button>
         </li>
         <li>
           <span>Mainboard</span>
-          <span class="part-count">0</span>
+          <span class="part-count"></span>
           <button class="add-btn">ADD</button>
         </li>
         <li>
           <span>GPU</span>
-          <span class="part-count">0</span>
+          <span class="part-count"></span>
           <button class="add-btn">ADD</button>
         </li>
         <li>
           <span>RAM</span>
-          <span class="part-count">0</span>
+          <span class="part-count"></span>
           <button class="add-btn">ADD</button>
         </li>
         <li>
           <span>Storage</span>
-          <span class="part-count">0</span>
+          <span class="part-count"></span>
           <button class="add-btn">ADD</button>
         </li>
         <li>
-          <span>Power Supply</span>
-          <span class="part-count">0</span>
+          <span>PowerSupply</span>
+          <span class="part-count"></span>
           <button class="add-btn">ADD</button>
         </li>
         <li>
           <span>Case</span>
-          <span class="part-count">0</span>
+          <span class="part-count"></span>
           <button class="add-btn">ADD</button>
         </li>
         <li>
           <span>Cooling</span>
-          <span class="part-count">0</span>
+          <span class="part-count"></span>
           <button class="add-btn">ADD</button>
         </li>
       </ul>
@@ -95,25 +95,35 @@
             <option>Z690</option>
             <option>B550</option>
           </select>
-          <input type="text" placeholder="ค้นหา..." class="search-box">
-          <select class="sort-select">
-            <option>รุ่นล่าสุด</option>
-            <option>ราคาต่ำ-สูง</option>
-            <option>ราคาสูง-ต่ำ</option>
-          </select>
-          <button class="apply-filter-btn">Apply</button>
+          <div class="search-sort-apply">
+            <input type="text" placeholder="ค้นหา..." class="search-box">
+            <select class="sort-select">
+              <option>รุ่นล่าสุด</option>
+              <option>ราคาต่ำ-สูง</option>
+              <option>ราคาสูง-ต่ำ</option>
+            </select>
+            <button class="apply-filter-btn">Apply</button>
+          </div>
         </div>
       </div>
 
       <!-- ส่วนแสดงผลสินค้า -->
       <div class="product-grid">
         <div class="product-card">
+          <div class="product-image">ภาพสินค้า</div>
+          <div class="product-info">
+            <h3 class="product-name">CPU Model 1</h3>
+            <p class="product-detail">รายละเอียดสั้น ๆ</p>
+            <span class="product-price">฿4,500</span>
+            <button class="add-cart-btn">หยิบใส่ตะกร้า</button>
+          </div>
+        </div>
         <div class="product-card">
           <div class="product-image">ภาพสินค้า</div>
           <div class="product-info">
-            <h3 class="product-name">GPU Model 1</h3>
+            <h3 class="product-name">CPU Model 2</h3>
             <p class="product-detail">รายละเอียดสั้น ๆ</p>
-            <span class="product-price">฿25,000</span>
+            <span class="product-price">฿5,500</span>
             <button class="add-cart-btn">หยิบใส่ตะกร้า</button>
           </div>
         </div>
