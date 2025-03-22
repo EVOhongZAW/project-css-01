@@ -132,9 +132,15 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f9f9f9;
 }
 
+/* จัดกลุ่มช่องค้นหา, รุ่นล่าสุด, และปุ่ม Apply ให้อยู่ด้านขวา */
+.search-sort-apply {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; /* ย้ายกลุ่มนี้ไปทางขวา */
+}
+
 .search-box {
-  flex: 1;
-  min-width: 200px;
+  width: 150px; /* ปรับขนาดช่องค้นหาให้สั้นลง */
 }
 
 .product-grid {
