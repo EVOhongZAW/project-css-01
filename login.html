@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>เข้าสู่ระบบ</title>
-  <link rel="stylesheet" href="SUP login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ล็อกอิน - MyStore</title>
+    <link rel="stylesheet" href="SUP test04.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="login-wrapper">
+        <div class="login-container">
+            <div class="login-header">
+                <img src="logo.png" alt="MyStore Logo" class="logo">
+                <h2>ล็อกอินบัญชี</h2>
+            </div>
 
-  <!-- กล่องสำหรับล็อกอิน -->
-  <div class="login-container">
-    <!-- ไอคอน + ชื่อผู้ใช้ -->
-    <div class="input-group">
-      <!-- ถ้าต้องการใช้ Font Awesome ไอคอนผู้ใช้:
-           <i class="fa fa-user"></i> 
-           หรือแทนด้วย <img src="user-icon.png" alt="user icon"> -->
-      <span class="icon">👤</span> 
-      <input type="text" placeholder="ชื่อผู้ใช้">
+            <form class="login-form">
+                <div class="form-group">
+                    <input type="text" placeholder="ชื่อผู้ใช้/อีเมล" required>
+                </div>
+                
+                <div class="form-group password-group">
+                    <input type="password" placeholder="รหัสผ่าน" required>
+                    <i class="fas fa-eye password-toggle"></i>
+                </div>
+
+                <div class="login-links">
+                    <a href="#" class="login-link">พบปัญหา?</a>
+                    <a href="#" class="login-link">ลงทะเบียน</a>
+                </div>
+
+                <button type="submit" class="login-btn">เข้าสู่ระบบ</button>
+            </form>
+
+            <div class="login-footer">
+                <div class="divider">
+                    <span>หรือล็อกอินด้วยวิธีอื่น</span>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <img src="google-icon.png" alt="Google Login">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="facebook-icon.png" alt="Facebook Login">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- ไอคอน + รหัสผ่าน -->
-    <div class="input-group">
-      <!-- ไอคอนล็อค หรือใช้ Font Awesome:
-           <i class="fa fa-lock"></i> -->
-      <span class="icon">🔒</span>
-      <input type="password" placeholder="รหัสผ่าน">
-    </div>
-
-    <!-- ตัวเลือก: บันทึก / ลืมรหัสผ่าน -->
-    <div class="options">
-      <label>
-        <input type="checkbox">
-        บันทึก
-      </label>
-      <a href="#" class="forgot-link">ลืมรหัสผ่าน?</a>
-    </div>
-
-    <!-- ปุ่มต่าง ๆ -->
-    <button class="btn login-btn">เข้าสู่ระบบ</button>
-    <button class="btn register-btn">ลงทะเบียน</button>
-    <button class="btn google-btn">
-      <!-- ถ้าต้องการใส่โลโก้ Google:
-           <img src="google-logo.png" alt="Google Logo" class="google-logo"> -->
-      เข้าสู่ระบบผ่าน Google
-    </button>
-  </div>
-
 </body>
 </html>
