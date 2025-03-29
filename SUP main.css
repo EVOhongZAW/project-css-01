@@ -7,11 +7,10 @@
   line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Layout */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -19,9 +18,8 @@ h1, h2, h3 {
   gap: 20px;
 }
 
-/* Sidebar */
 .sidebar {
-  background: #fff;
+  background-color: #fff;
   width: 250px;
   padding: 20px;
   border-radius: 8px;
@@ -32,28 +30,45 @@ h1, h2, h3 {
   top: 0;
 }
 
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
 .part-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .part-list li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
 }
 
-.reset-section {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  padding-top: 10px;
-  border-top: 1px solid #eee;
+.part-list li:last-child {
+  border-bottom: none;
 }
 
-/* Buttons */
-button {
-  background: #ff6b6b;
+.part-list li span {
+  flex: 1;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.part-count {
+  font-size: 14px;
+  color: #666;
+  margin-right: 10px;
+}
+
+.add-btn, .reset-btn, .apply-filter-btn, .add-cart-btn, .login-btn {
+  background-color: #ff6b6b;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -62,20 +77,67 @@ button {
   transition: background 0.3s;
 }
 
-button:hover {
-  background: #ff3b3b;
+.add-btn:hover, .reset-btn:hover, .apply-filter-btn:hover, .add-cart-btn:hover, .login-btn:hover {
+  background-color: #ff3b3b;
 }
 
-/* Content */
+.reset-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+}
+
+.price-total {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
 .content {
   flex: 1;
-  background: #fff;
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Product Grid */
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-select, .sort-select, .search-box {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.search-sort-apply {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.search-box {
+  width: 150px;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -83,7 +145,7 @@ button:hover {
 }
 
 .product-card {
-  background: #fff;
+  background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   overflow: hidden;
@@ -96,11 +158,35 @@ button:hover {
 
 .product-image {
   height: 150px;
-  background: #f0f0f0;
+  background-color: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
+  color: #666;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product-detail {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff6b6b;
+  display: block;
+  margin-bottom: 10px;
 }
 
 /* Header */
@@ -109,8 +195,14 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: #333;
+  background-color: #333;
   color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
 }
 
 .nav-links {
@@ -122,18 +214,34 @@ button:hover {
   color: white;
   text-decoration: none;
   font-size: 16px;
+  font-family: 'Roboto', sans-serif;
 }
 
-/* Responsive */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
   .sidebar {
     width: 100%;
+    max-height: none;
     position: static;
   }
   .nav-links, .right-section {
     display: none;
+  }
+  .logo {
+    font-size: 20px;
   }
 }
