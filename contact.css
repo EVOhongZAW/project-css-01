@@ -1,60 +1,170 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ติดต่อเรา | NOCPU</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="contact.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="logo">NOCPU</div>
-    <nav class="nav-links">
-      <a href="#">จัดสเปค</a>
-      <a href="#">ข่าวใหม่</a>
-      <a href="#" class="active">ติดต่อเรา</a>
-    </nav>
-    <div class="header-actions">
-      <div class="cart-icon">🛒</div>
-      <button class="login-btn">เข้าสู่ระบบ</button>
-    </div>
-  </header>
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
 
-  <main class="contact-container">
-    <section class="contact-intro">
-      <h1>ติดต่อเรา</h1>
-      <ul class="contact-list">
-        <li><strong>โทร:</strong> <a href="tel:+66812345678">081-234-5678</a></li>
-        <li><strong>Email:</strong> <a href="mailto:contact@nocpu.com">contact@nocpu.com</a></li>
-        <li><strong>Facebook:</strong> <a href="https://facebook.com/nocpu" target="_blank">fb.com/nocpu</a></li>
-      </ul>
-    </section>
+/* ===== Base Styles ===== */
+:root {
+  --primary-color: #ff6b6b;
+  --primary-hover: #ff3b3b;
+  --text-color: #333;
+  --bg-color: #f0f0f0;
+  --white: #fff;
+  --gray-light: #eaeaea;
+  --border-radius: 5px;
+  --transition: all 0.3s ease;
+}
 
-    <section class="contact-form-section">
-      <h2>แบบฟอร์มการติดต่อ</h2>
-      <form class="contact-form" action="/submit-contact" method="POST">
-        <label for="subject">หัวข้อ</label>
-        <select id="subject" name="subject" required>
-          <option value="" disabled selected>เลือกหัวข้อที่ต้องการติดต่อ</option>
-          <option value="product">สอบถามเกี่ยวกับสินค้า</option>
-          <option value="technical">ปัญหาทางเทคนิค</option>
-          <option value="order">ติดตามคำสั่งซื้อ</option>
-          <option value="other">อื่นๆ</option>
-        </select>
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
 
-        <label for="fullname">ชื่อและนามสกุล</label>
-        <input type="text" id="fullname" name="fullname" required>
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
 
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" required>
+/* ===== Header Styles ===== */
+.site-header {
+  background-color: var(--text-color);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
 
-        <label for="message">ข้อความ</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 
-        <button type="submit" class="submit-btn">ส่งข้อความ</button>
-      </form>
-    </section>
-  </main>
-</body>
-</html>
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--primary-color);
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.login-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ===== Contact Page Styles ===== */
+.contact-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.contact-intro h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-list a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-list a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.contact-form-section h2 {
+  font-size: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form label {
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 0.5rem;
+  border: 1px solid var(--gray-light);
+  border-radius: var(--border-radius);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-links {
+    flex-direction: column;
+  }
+  .contact-container {
+    text-align: center;
+  }
+}
