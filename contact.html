@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ติดต่อเรา | NOCPU</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">NOCPU</div>
+    <nav class="nav-links">
+      <a href="#">จัดสเปค</a>
+      <a href="#">ข่าวใหม่</a>
+      <a href="#" class="active">ติดต่อเรา</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-button" aria-label="ตะกร้าสินค้า">🛒</button>
+      <button class="login-btn">เข้าสู่ระบบ</button>
+    </div>
+  </header>
+
+  <main class="contact-container">
+    <section class="contact-intro">
+      <h1>ติดต่อเรา</h1>
+      <ul class="contact-list">
+        <li><strong>โทร:</strong> <a href="tel:+66812345678">081-234-5678</a></li>
+        <li><strong>Email:</strong> <a href="mailto:contact@nocpu.com">contact@nocpu.com</a></li>
+        <li><strong>Facebook:</strong> <a href="https://facebook.com/nocpu" target="_blank">fb.com/nocpu</a></li>
+      </ul>
+    </section>
+
+    <section class="contact-form-section">
+      <h2>แบบฟอร์มการติดต่อ</h2>
+      <form class="contact-form" action="/submit-contact" method="POST">
+        <label for="subject">หัวข้อ</label>
+        <select id="subject" name="subject" required>
+          <option value="" disabled selected>เลือกหัวข้อที่ต้องการติดต่อ</option>
+          <option value="product">สอบถามเกี่ยวกับสินค้า</option>
+          <option value="technical">ปัญหาทางเทคนิค</option>
+          <option value="order">ติดตามคำสั่งซื้อ</option>
+          <option value="other">อื่นๆ</option>
+        </select>
+
+        <label for="fullname">ชื่อและนามสกุล</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">ข้อความ</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="submit-btn">ส่งข้อความ</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

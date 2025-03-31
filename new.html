@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOCPU - ข่าวสารเทคโนโลยี</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="news.css">
+</head>
+<body>
+
+  <!-- ส่วน Header -->
+  <header class="site-header">
+    <div class="logo">NOCPU</div>
+    <nav class="nav-links">
+      <a href="#">จัดสเปค</a>
+      <a href="#" class="active">ข่าวใหม่</a>
+      <a href="#">ติดต่อเรา</a>
+    </nav>
+    <div class="right-section">
+      <div class="cart-icon">🛒</div>
+      <button class="login-btn">login</button>
+    </div>
+  </header>
+
+  <!-- ส่วนเนื้อหาหลัก -->
+  <main class="news-container">
+    <h2 class="news-title">ข่าวสารเทคโนโลยีล่าสุด</h2>
+
+    <!-- กล่องค้นหาข่าว -->
+    <div class="search-box">
+      <input type="text" placeholder="ค้นหาข่าว..." class="search-input">
+      <button class="search-btn">ค้นหา</button>
+    </div>
+
+    <!-- ส่วนแสดงข่าวสาร -->
+    <div class="news-grid">
+      <!-- ข่าวที่ 1 -->
+      <article class="news-card">
+        <div class="news-image" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+        <div class="news-content">
+          <h3 class="news-headline">Intel เปิดตัวโปรเซสเซอร์รุ่นใหม่ประสิทธิภาพสูง</h3>
+          <p class="news-excerpt">Intel ประกาศเปิดตัวโปรเซสเซอร์รุ่นล่าสุดในซีรีส์ Core i9 รุ่นที่ 14 ด้วยความเร็วสูงสุด 5.8 GHz...</p>
+          <div class="news-meta">
+            <span class="news-date">10 มิถุนายน 2566</span>
+            <span class="news-category">ฮาร์ดแวร์</span>
+          </div>
+          <a href="#" class="read-more">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <!-- ข่าวที่ 2 -->
+      <article class="news-card">
+        <div class="news-image" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+        <div class="news-content">
+          <h3 class="news-headline">NVIDIA เปิดตัวการ์ดจอ RTX 5000 ซีรีส์</h3>
+          <p class="news-excerpt">NVIDIA ประกาศเปิดตัวการ์ดจอรุ่นใหม่ในซีรีส์ RTX 5000 ที่มาพร้อมกับเทคโนโลยี DLSS 3.5...</p>
+          <div class="news-meta">
+            <span class="news-date">5 มิถุนายน 2566</span>
+            <span class="news-category">กราฟิกการ์ด</span>
+          </div>
+          <a href="#" class="read-more">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <!-- ข่าวที่ 3 -->
+      <article class="news-card">
+        <div class="news-image" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+        <div class="news-content">
+          <h3 class="news-headline">Windows 12 อาจเปิดตัวปีหน้า</h3>
+          <p class="news-excerpt">แหล่งข่าวลือ透露ว่า Microsoft อาจเตรียมเปิดตัว Windows 12 ในปี 2024 พร้อมฟีเจอร์ใหม่...</p>
+          <div class="news-meta">
+            <span class="news-date">1 มิถุนายน 2566</span>
+            <span class="news-category">ซอฟต์แวร์</span>
+          </div>
+          <a href="#" class="read-more">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <!-- ข่าวที่ 4 -->
+      <article class="news-card">
+        <div class="news-image" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+        <div class="news-content">
+          <h3 class="news-headline">AMD ประกาศราคาโปรเซสเซอร์ Ryzen ใหม่</h3>
+          <p class="news-excerpt">AMD ประกาศลดราคาโปรเซสเซอร์ Ryzen 7000 ซีรีส์ หลัง Intel เปิดตัวชิปรุ่นใหม่...</p>
+          <div class="news-meta">
+            <span class="news-date">28 พฤษภาคม 2566</span>
+            <span class="news-category">ฮาร์ดแวร์</span>
+          </div>
+          <a href="#" class="read-more">อ่านต่อ</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- ปุ่มโหลดข่าวเพิ่ม -->
+    <div class="load-more-container">
+      <button class="load-more-btn">โหลดข่าวเพิ่มเติม</button>
+    </div>
+  </main>
+
+</body>
+</html>
